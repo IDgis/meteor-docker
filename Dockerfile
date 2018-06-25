@@ -16,3 +16,10 @@ RUN bash -c 'curl "https://nodejs.org/dist/v8.11.3/node-v8.11.3-linux-x64.tar.gz
   && cd /usr/local \
   && tar --strip-components 1 -xzf /tmp/required-node-linux-x64.tar.gz \
   && rm /tmp/required-node-linux-x64.tar.gz
+
+# Create the meteor user
+RUN useradd -M --uid 3000 --shell /bin/false meteor
+
+# Expose default port 3000
+EXPOSE 3000
+ENV PORT 3000

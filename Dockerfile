@@ -8,7 +8,7 @@ RUN apt-get update && \
     apt-get clean
 
 # Install Meteor
-RUN (curl https://install.meteor.com/?release=1.6.1.1| sh)
+RUN (curl https://install.meteor.com/?release=1.7.0.3| sh)
 
 # Install Node
 

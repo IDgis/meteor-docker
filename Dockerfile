@@ -13,7 +13,7 @@ RUN apt-get update && \
 RUN (curl https://install.meteor.com/?release=1.7.0.5| sh)
 
 # Install Node
-RUN bash -c 'curl "https://nodejs.org/dist/v8.11.3/node-v8.11.3-linux-x64.tar.gz" > /tmp/required-node-linux-x64.tar.gz' \
+RUN bash -c 'curl "https://nodejs.org/dist/v8.11.4/node-v8.11.4-linux-x64.tar.gz" > /tmp/required-node-linux-x64.tar.gz' \
   && cd /usr/local \
   && tar --strip-components 1 -xzf /tmp/required-node-linux-x64.tar.gz \
   && rm /tmp/required-node-linux-x64.tar.gz

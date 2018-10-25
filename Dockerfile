@@ -2,6 +2,7 @@ FROM ubuntu:16.04
 LABEL maintainer="IDgis bv"
 
 COPY cleanup.sh /
+RUN chmod u+x /cleanup.sh
 
 RUN apt-get update && \
     apt-get install -y bzip2 bsdtar build-essential curl git python && \

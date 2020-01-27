@@ -1,4 +1,4 @@
-FROM ubuntu:16.04
+FROM ubuntu:18.04
 LABEL maintainer="IDgis bv"
 
 COPY cleanup.sh /
@@ -11,10 +11,10 @@ RUN apt-get update && \
     apt-get clean
 
 # Install Meteor
-RUN (curl https://install.meteor.com/?release=1.0.0.0 | sh)
+RUN (curl https://install.meteor.com/?release=1.9.0 | sh)
 
 # Install Node
-RUN bash -c 'curl "https://nodejs.org/dist/v8.11.3/node-v8.11.3-linux-x64.tar.gz" > /tmp/required-node-linux-x64.tar.gz' \
+RUN bash -c 'curl "https://nodejs.org/dist/v12.14.0/node-v12.14.0-linux-x64.tar.gz" > /tmp/required-node-linux-x64.tar.gz' \
   && cd /usr/local \
   && tar --strip-components 1 -xzf /tmp/required-node-linux-x64.tar.gz \
   && rm /tmp/required-node-linux-x64.tar.gz

@@ -11,7 +11,7 @@ RUN apt-get update && \
     apt-get clean
 
 # Install Meteor
-RUN (curl https://install.meteor.com/?release=1.9.0 | sh)
+RUN (curl https://install.meteor.com/?release=1.9 | sh)
 
 # Install Node
 RUN bash -c 'curl "https://nodejs.org/dist/v12.14.0/node-v12.14.0-linux-x64.tar.gz" > /tmp/required-node-linux-x64.tar.gz' \

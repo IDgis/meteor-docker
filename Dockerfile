@@ -5,7 +5,7 @@ COPY cleanup.sh /
 RUN chmod u+x /cleanup.sh
 
 RUN apt-get update && \
-    apt-get install -y bzip2 bsdtar build-essential curl git python && \
+    apt-get install -y bzip2 libarchive-tools build-essential curl git python && \
     rm -rf /var/lib/apt/lists/* && \
     apt-get --purge autoremove -y && \
     apt-get clean
